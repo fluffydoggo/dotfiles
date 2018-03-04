@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Symlink 
-DOTFILES='~/dotfiles'
+# Finds the relative path of the dotfiles dir from $PWD.
+# e.g. if user runs ./dotfiles/install.sh, 
+# then DOTFILES is ./dotfiles
+DOTFILES=`dirname $0`
+# Symlink root files to dotfiles
 ln -f -s ${DOTFILES}/.vimrc ~/.vimrc
 ln -f -s ${DOTFILES}/.tmux.conf ~/.tmux.conf
 
