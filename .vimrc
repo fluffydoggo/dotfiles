@@ -4,7 +4,7 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
-" TODO: Load plugins here (pathogen or vundle)
+" If Plug is not installed, then download Plug.
 if (!filereadable(glob("~/.vim/autoload/plug.vim")))
    execute "!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
  endif
